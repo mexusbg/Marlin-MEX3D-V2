@@ -667,9 +667,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  21.73 // MEXUS
-    #define DEFAULT_Ki   1.53 // MEXUS
-    #define DEFAULT_Kd  76.55 // MEXUS
+    #define DEFAULT_Kp  24.79 // MEXUS
+    #define DEFAULT_Ki   1.68 // MEXUS
+    #define DEFAULT_Kd  91.40 // MEXUS
   #endif
 #endif
 
@@ -1222,14 +1222,14 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 } // MEXUS
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 398.27, 94.5 } // MEXUS
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 200, 200, 5, 25 } // MEXUS
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 25 } // MEXUS
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1242,7 +1242,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 100, 10000 } // MEXUS
+#define DEFAULT_MAX_ACCELERATION      { 8000, 8000, 100, 10000 } // MEXUS
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1257,9 +1257,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves // MEXUS
-#define DEFAULT_RETRACT_ACCELERATION  500    // E acceleration for retracts // MEXUS
-#define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves // MEXUS
+#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves // MEXUS
+#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts // MEXUS
+#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves // MEXUS
 
 /**
  * Default Jerk limits (mm/s)
@@ -1271,9 +1271,9 @@
  */
 //#define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK 10.0
-  #define DEFAULT_YJERK 10.0
-  #define DEFAULT_ZJERK  0.3
+  #define DEFAULT_XJERK 20.0 // MEXUS was 10.0
+  #define DEFAULT_YJERK 20.0 // MEXUS was 10.0
+  #define DEFAULT_ZJERK  0.4 // MEXUS was 0.3
   //#define DEFAULT_IJERK  0.3
   //#define DEFAULT_JJERK  0.3
   //#define DEFAULT_KJERK  0.3
