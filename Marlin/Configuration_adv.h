@@ -658,7 +658,7 @@
 #define EXTRUDER_AUTO_FAN_SPEED 255   // 255 == full speed
 #define CHAMBER_AUTO_FAN_TEMPERATURE 30
 #define CHAMBER_AUTO_FAN_SPEED 255
-#define COOLER_AUTO_FAN_TEMPERATURE 18
+#define COOLER_AUTO_FAN_TEMPERATURE // 30 MEXUS 18
 #define COOLER_AUTO_FAN_SPEED 255
 
 /**
@@ -2757,7 +2757,7 @@
   #endif
 
   #if AXIS_IS_TMC_CONFIG(Y)
-    #define Y_CURRENT       580 // MEXUS was 800
+    #define Y_CURRENT       800 // MEXUS was 800
     #define Y_CURRENT_HOME  Y_CURRENT / 2 // MEXUS was Y_CURRENT
     #define Y_MICROSTEPS     16
     #define Y_RSENSE          0.11
